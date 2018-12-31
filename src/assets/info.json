@@ -1,0 +1,65 @@
+{
+    "layout": [
+        {
+            "id": "example-a1",
+            "parent":"portal",
+            "name": "example a 01",
+            "width": 200,
+            "height": 300,
+            "positionX": 201,
+            "positionY": 0,
+            "component": "ExampleA",
+            "data": {}
+        },{
+            "id": "example-a2",
+            "parent":"portal",
+            "name": "example a 02",
+            "width": 200,
+            "height": 300,
+            "positionX": 0,
+            "positionY": 0,
+            "component": "ExampleA",
+            "data": {}
+        },{
+            "id": "example-b1",
+            "parent":"portal",
+            "name": "example b 01",
+            "width": 300,
+            "height": 200,
+            "positionX": 401,
+            "positionY": 0,
+            "component": "ExampleB",
+            "data": {}
+        },{
+            "id": "example-a3",
+            "parent":"portal",
+            "name": "example a 03",
+            "width": 200,
+            "height": 300,
+            "positionX": 0,
+            "positionY": 301,
+            "component": "ExampleA",
+            "data": {}
+        },{
+            "id": "example-b2",
+            "parent":"portal",
+            "name": "example b 02",
+            "width": 300,
+            "height": 200,
+            "positionX": 201,
+            "positionY": 301,
+            "component": "ExampleB",
+            "data": {}
+        },{
+            "id": "example-a4",
+            "parent":"portal",
+            "name": "example a 04",
+            "width": 201,
+            "height": 300,
+            "positionX": 501,
+            "positionY": 301,
+            "component": "ExampleA",
+            "data": {}
+        }
+    ]
+}

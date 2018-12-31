@@ -1,0 +1,19 @@
+
+.node{
+    border:1px solid #ccc;
+    min-width: 120px;
+    min-height: 100px;
+    position: absolute;
+    display: block;
+    .title{
+        color: #fff;
+        background-color: #3f51b5;
+        width:100%;
+        button{
+            float: right;
+        }
+    }
+    .dynamic-component{
+        width:100%;
+    }
+}

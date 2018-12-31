@@ -1,0 +1,10 @@
+app-templates{
+    height: 30px;
+    width: 100%;
+    display: block;
+}
+
+app-portal{
+    width: 100%;
+    height: calc(100% - 30px);
+}

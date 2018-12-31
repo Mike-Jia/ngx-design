@@ -1,0 +1,11 @@
+.design{
+    .templates{
+        float: left;
+    }
+    .menus{
+        float: right;
+    }
+    &:after{
+        clear: both;
+    }
+}
