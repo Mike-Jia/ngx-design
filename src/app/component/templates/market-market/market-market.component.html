@@ -1,0 +1,22 @@
+<nz-button-group>
+  <button nz-button [nzGhost]="true">交易所1</button>
+  <button nz-button [nzGhost]="true">交易所2</button>
+  <button nz-button [nzGhost]="true">交易所3</button>
+  <button nz-button [nzGhost]="true">交易所4</button>
+</nz-button-group>
+<nz-table #smallTable nzSize="small" [nzData]="data">
+  <thead>
+    <tr>
+      <th>合约</th>
+      <th>价格</th>
+      <th>涨幅</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of smallTable.data">
+      <td>{{data.name}}</td>
+      <td>{{data.lastPrice}}</td>
+      <td>{{data.change}}</td>
+    </tr>
+  </tbody>
+</nz-table>

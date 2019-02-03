@@ -1,9 +1,8 @@
 import { ComponentPortal } from '@angular/cdk/portal';
-import { AfterViewInit, Component, ElementRef, Input, OnInit, Renderer2, ViewChild, Output, EventEmitter } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2, ViewChild } from '@angular/core';
 import { BaseNode } from 'src/app/model/base-node';
 import { Config } from 'src/app/model/config';
 import { PortalService } from 'src/app/service/portal.service';
-import { PortalOperateType } from 'src/app/model/portal-operate-message';
 
 @Component({
   selector: 'app-node',
@@ -14,6 +13,9 @@ export class NodeComponent implements BaseNode, OnInit, AfterViewInit {
   @Input() config: Config;
   @Output() configChanged = new EventEmitter<Config>();
   @ViewChild('node') node: ElementRef;
+
+  isFullScreen = false;
+  isEditing = false;
   dynamicComponent: ComponentPortal<any>;
 
   constructor(private renderer: Renderer2, private portalService: PortalService) { }
@@ -27,6 +29,12 @@ export class NodeComponent implements BaseNode, OnInit, AfterViewInit {
     this.renderer.setStyle(this.node.nativeElement, 'height', `${this.config.height}px`);
     this.renderer.setStyle(this.node.nativeElement, 'transform',
       `translate3d(${this.config.positionX}px,${this.config.positionY}px,0)`);
+  }
+
+  fullScreen(): void {
+    this.node.nativeElement.requestFullscreen();
+    this.isFullScreen = true;
+    // document.onfullscreenchange(ev)
   }
 
   delete(): void {

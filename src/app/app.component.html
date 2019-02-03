@@ -1,3 +1,21 @@
-<app-templates></app-templates>
-
-<app-portal></app-portal>
+<nz-layout class="main">
+  <nz-header class="header">
+    <div class="logo"></div>
+    <div class="product-name">{{productName}}</div>
+    <ul nz-menu [nzMode]="'horizontal'" [nzTheme]="'dark'">
+      <li nz-menu-item (click)="load('market-trade')">行情/交易</li>
+      <li nz-menu-item (click)="load('market')">行情</li>
+      <li nz-menu-item (click)="load('trade')">交易</li>
+      <li nz-menu-item (click)="load('info')" nzSelected="true">自定义布局</li>
+    </ul>
+  </nz-header>
+  <nz-layout class="content">
+    <!-- <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzWidth]="200">
+    </nz-sider> -->
+    <nz-content>
+      <!-- <app-templates></app-templates> -->
+      <app-portal></app-portal>
+    </nz-content>
+  </nz-layout>
+  <nz-footer class="footer">©CTPT 2019</nz-footer>
+</nz-layout>

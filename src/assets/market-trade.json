@@ -1,0 +1,75 @@
+{
+    "layout": [
+        {
+            "id": "MarketMarket-1",
+            "parent":"portal",
+            "name": "Market info",
+            "width": 200,
+            "height": 300,
+            "positionX": 201,
+            "positionY": 0,
+            "component": "MarketMarket",
+            "data": {}
+        },{
+            "id": "MarketChart-1",
+            "parent":"portal",
+            "name": "Chart info",
+            "width": 200,
+            "height": 300,
+            "positionX": 0,
+            "positionY": 0,
+            "component": "MarketChart",
+            "data": {}
+        },{
+            "id": "MarketDepth-1",
+            "parent":"portal",
+            "name": "Depth info",
+            "width": 300,
+            "height": 200,
+            "positionX": 401,
+            "positionY": 0,
+            "component": "MarketDepth",
+            "data": {}
+        },{
+            "id": "MarketTrade-1",
+            "parent":"portal",
+            "name": "Market trade info",
+            "width": 200,
+            "height": 300,
+            "positionX": 0,
+            "positionY": 301,
+            "component": "MarketTrade",
+            "data": {}
+        },{
+            "id": "TradeOrderList-1",
+            "parent":"portal",
+            "name": "Order List info",
+            "width": 300,
+            "height": 200,
+            "positionX": 201,
+            "positionY": 301,
+            "component": "TradeOrderList",
+            "data": {}
+        },{
+            "id": "TradeTrade-1",
+            "parent":"portal",
+            "name": "Trade info",
+            "width": 201,
+            "height": 300,
+            "positionX": 501,
+            "positionY": 301,
+            "component": "TradeTrade",
+            "data": {}
+        },{
+            "id": "TradePosition-1",
+            "parent":"portal",
+            "name": "Position info",
+            "width": 201,
+            "height": 300,
+            "positionX": 501,
+            "positionY": 301,
+            "component": "TradePosition",
+            "data": {}
+        }
+    ]
+}

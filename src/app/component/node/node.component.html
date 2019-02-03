@@ -1,7 +1,10 @@
-<div cdkDrag cdkDragBoundary=".portal" (cdkDragMoved)="onMoved($event)" class="node" #node>
+<div cdkDrag id="node.id" cdkDragBoundary="portal" (cdkDragMoved)="onMoved($event)" class="node" #node>
   <div class="title" cdkDragHandle>
     <span>{{config.name}}</span>
-    <button (click)="delete()">删除</button>
+    <div class="buttons">
+      <button *ngIf="!isFullScreen" nz-button [nzGhost]="true" [nzSize]="'small'" (click)="fullScreen()"><i nz-icon [type]="'fullscreen'"></i></button>
+      <button *ngIf="isEditing" nz-button [nzGhost]="true" [nzSize]="'small'" (click)="delete()"><i nz-icon [type]="'close'"></i></button>
+    </div>
   </div>
   <div class="dynamic-component">
     <ng-template [cdkPortalOutlet]="dynamicComponent"></ng-template>

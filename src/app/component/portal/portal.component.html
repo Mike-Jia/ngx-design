@@ -1,4 +1,4 @@
 <div class="portal">
-  <app-group></app-group>
-  <app-node *ngFor="let config of configs;" [config]="config"></app-node>
+  <!-- <app-group></app-group> -->
+  <app-node [id]="config.id" *ngFor="let config of configs;" [config]="config"></app-node>
 </div>

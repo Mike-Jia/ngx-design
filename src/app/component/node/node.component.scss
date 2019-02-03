@@ -1,19 +1,22 @@
+$node-title-background-color: #131625;
+$node-title-color: #d2d6ec;
+$node-background-color: #383f66;
 
 .node{
-    border:1px solid #ccc;
     min-width: 120px;
     min-height: 100px;
     position: absolute;
     display: block;
     .title{
-        color: #fff;
-        background-color: #3f51b5;
+        color: $node-title-color;
+        background-color: $node-title-background-color;
         width:100%;
-        button{
+        .buttons{
             float: right;
         }
     }
     .dynamic-component{
         width:100%;
+        background-color: $node-background-color;
     }
 }

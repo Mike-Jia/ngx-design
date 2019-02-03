@@ -26,19 +26,19 @@ export class PortalService {
     this.operateSubject.next(new PortalOperateMessage(PortalOperateType.UPDATE, config.id, config));
   }
 
-  load(): void {
-    this.operateSubject.next(new PortalOperateMessage(PortalOperateType.LOAD));
+  load(solutionId: string): void {
+    this.operateSubject.next(new PortalOperateMessage(PortalOperateType.LOAD, solutionId));
   }
 
-  save(): void {
-    this.operateSubject.next(new PortalOperateMessage(PortalOperateType.SAVE));
+  save(solutionId: string): void {
+    this.operateSubject.next(new PortalOperateMessage(PortalOperateType.SAVE, solutionId));
   }
 
-  doLoad(): Observable<any> {
-    return this.http.get('assets/info.json');
+  doLoad(solutionId: string): Observable<any> {
+    return this.http.get(`assets/${solutionId}.json`);
   }
 
-  doSave(data: any): Observable<any> {
-    return this.http.post('xxx', data);
+  doSave(solutionId: string, data: any): Observable<any> {
+    return this.http.post(`${solutionId}`, data);
   }
 }
